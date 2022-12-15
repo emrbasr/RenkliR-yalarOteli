@@ -8,12 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RenkliRuyalarOteli.Dal\RenkliRuyalarOteli.DAL.csproj" />
-    <ProjectReference Include="..\RenkliRüyalarOteli.Entities\RenkliRüyalarOteli.Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
+    <ProjectReference Include="..\RenkliRüyalarOteli.Entities\RenkliRuyalarOteli.Entities.csproj" />
   </ItemGroup>
 
 </Project>

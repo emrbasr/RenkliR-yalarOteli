@@ -1,9 +1,10 @@
 ﻿using RenkliRüyalarOteli.Entities.Entities.Abstract;
 
-namespace RenkliRüyalarOteli.Entities.Entities.Concrete
+namespace RenkliRuyalarOteli.Entities.Entites.Concrete
 {
     public class Rezervasyon : BaseEntity
     {
+
         // Hangi Odaya Rezervasyon Yapildi        
         public Guid OdaId { get; set; }
         public Oda Oda { get; set; }
@@ -20,6 +21,5 @@ namespace RenkliRüyalarOteli.Entities.Entities.Concrete
 
         public Guid KullaniciId { get; set; }
         public Kullanici Kullanici { get; set; }
-
     }
 }

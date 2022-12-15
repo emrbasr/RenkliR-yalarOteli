@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RenkliRüyalarOteli.Entities.Entities.Concrete;
+using RenkliRuyalarOteli.Entities.Entites.Concrete;
 
 namespace RenkliRuyalarOteli.DAL.EntityTypeConfigiration
 {
@@ -18,7 +18,7 @@ namespace RenkliRuyalarOteli.DAL.EntityTypeConfigiration
                 .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Restrict);
 
             builder.HasOne(p => p.Kullanici)
-              .WithMany(p => p.Rezervasyon)
+              .WithMany(p => p.Rezervasyonlar)
               .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Restrict);
         }
     }

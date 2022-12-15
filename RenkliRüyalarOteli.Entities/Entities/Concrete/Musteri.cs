@@ -1,6 +1,6 @@
 ﻿using RenkliRüyalarOteli.Entities.Entities.Abstract;
 
-namespace RenkliRüyalarOteli.Entities.Entities.Concrete
+namespace RenkliRuyalarOteli.Entities.Entites.Concrete
 {
     public class Musteri : BaseEntity
     {
@@ -13,6 +13,5 @@ namespace RenkliRüyalarOteli.Entities.Entities.Concrete
         public Guid KullaniciId { get; set; }
         public Kullanici Kullanici { get; set; }
         public ICollection<Rezervasyon> Rezervasyonlari { get; set; }
-
     }
 }

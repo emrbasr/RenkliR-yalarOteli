@@ -1,6 +1,6 @@
 ﻿using RenkliRüyalarOteli.Entities.Entities.Abstract;
 
-namespace RenkliRüyalarOteli.Entities.Entities.Concrete
+namespace RenkliRuyalarOteli.Entities.Entites.Concrete
 {
     public class Oda : BaseEntity
     {

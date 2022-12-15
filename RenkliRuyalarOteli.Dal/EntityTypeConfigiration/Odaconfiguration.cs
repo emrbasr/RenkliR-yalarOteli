@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RenkliRüyalarOteli.Entities.Entities.Concrete;
+using RenkliRuyalarOteli.Entities.Entites.Concrete;
 
 namespace RenkliRuyalarOteli.DAL.EntityTypeConfigiration
 {
