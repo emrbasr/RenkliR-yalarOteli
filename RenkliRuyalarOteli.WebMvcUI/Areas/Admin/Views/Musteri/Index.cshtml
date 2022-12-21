@@ -1,0 +1,36 @@
+﻿@model List<Musteri>
+<a asp-action="Create" asp-controller="Musteri" class="btn btn-primary">Yeni Kayit</a> 
+    <div class="card">
+    <div class="card-header">
+        <h3>Musteriler</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    
+                    <td>Adi</td>
+                    <td>Soyadi</td>
+                    <td>Cinsiyet</td>
+                    <td>CepNo</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Musteri musteri in Model)
+                {
+                        <tr>
+                            <td>@musteri.Ad</td>
+                            <td>@musteri.Soyadi</td>
+                            <td>@musteri.Cinsiyet</td>
+                            <td>@musteri.CepNo</td>
+                          
+                            <td><a asp-action="Update" asp-controller="Musteri" class="btn btn-success" asp-route-Id="@musteri.Id">Update</a> </td>
+                            <td><a asp-action="Delete" asp-controller="Musteri" class="btn btn-danger" asp-route-Id="@musteri.Id">Delete</a> </td>
+                        </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

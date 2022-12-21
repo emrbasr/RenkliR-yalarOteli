@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RenkliRuyalarOteli.BL.Abstract;
 
-namespace RenkliRuyalarOteli.WebMvcUI.Controllers
+namespace RenkliRuyalarOteli.WebMvcUI.Areas.Admin.Controllers
 {
     public class OdaFiyatController : Controller
     {

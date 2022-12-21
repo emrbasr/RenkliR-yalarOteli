@@ -14,22 +14,20 @@
 	<link rel="stylesheet" href="~/css/accesibility.css">
 	<link rel="stylesheet" href="~/css/index.css">
 	<link rel="shortcut icon" href="~/img/favicon.webp" type="image/x-icon">
+
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+	<!-- icheck bootstrap -->
+	<link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="~/css/adminlte.min.css">
+
+
+
 </head>
 <body class="scroll-bar">
-	<div id="loader">
-		<svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			 viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-		<path fill="#d4af37" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
-		<animateTransform attributeName="transform"
-						  attributeType="XML"
-						  type="rotate"
-						  dur="1s"
-						  from="0 50 50"
-						  to="360 50 50"
-						  repeatCount="indefinite" />
-		</path>
-		</svg>
-	</div>
+	
 	<header>
 		<div class="header-container">
 			<nav class="header-nav-bar">
@@ -49,7 +47,7 @@
 					</li>
 					<li class="header-nav-list"><a class="header-nav-link" href="facilities.html">Facilities</a></li>
 					<li class="header-nav-list"><a class="header-nav-link" href="contact-page.html">Contact Us</a></li>
-					<li class="header-nav-list"><a class="header-btn header-btn-custom" href="https://timbu.com/search?query=hotel">BOOK NOW</a></li>
+					<li class="header-nav-list"><a class="header-btn header-btn-custom" asp-controller="Login" asp-action="Giris">Login</a></li>
 				</ul>
 
 				<div class="header-hamburger-icon">

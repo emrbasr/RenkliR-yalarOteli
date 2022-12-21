@@ -1,5 +1,5 @@
-using RenkliRuyalarOteli.BL.Abstract;
-using RenkliRuyalarOteli.BL.Concrete;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using RenkliRuyalarOteli.WebMvcUI.Extentions;
 
 namespace RenkliRuyalarOteli.WebMvcUI
 {
@@ -11,7 +11,19 @@ namespace RenkliRuyalarOteli.WebMvcUI
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddScoped<IKullaniciManager, KullaniciManager>();
+            builder.Services.AddRenkliRuyalarManager();
+
+            #region Cookie Base Authentication Ayarlarý
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                              .AddCookie(p =>
+                              {
+                                  p.LoginPath = "/Login/Giris";
+                                  p.LogoutPath = "/Login/LogOut";
+                                  p.Cookie.Name = "RenkliRuyalarOTel";
+                                  p.ExpireTimeSpan = TimeSpan.FromMinutes(30);   // Atýlan cookie ne kadar süre geçerli olacaksa belirttik.
+                              });
+            #endregion
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -23,6 +35,8 @@ namespace RenkliRuyalarOteli.WebMvcUI
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

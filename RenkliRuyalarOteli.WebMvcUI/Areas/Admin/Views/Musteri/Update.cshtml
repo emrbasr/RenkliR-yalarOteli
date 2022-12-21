@@ -1,0 +1,63 @@
+﻿@using RenkliRuyalarOteli.WebMvcUI.Areas.Admin.Models.Musteri;
+@model MusteriUpdateDto
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Ad @Model.Soyadi</h3>
+        <div class="card-header">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Update" asp-controller="Kullanici" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="MusteriTcNo">
+            
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Ad" class="form-control" placeholder="Adiniz">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Ad"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Soyadi" class="form-control" placeholder="Soyadi">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Soyadi"></span>
+                    </div>
+                </div>
+            </div>
+           
+            
+
+            
+            
+            <div class="input-group mb-3">
+                <input type="password" asp-for="MusteriTcNo" class="form-control" placeholder="Tc No">
+
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="MusteriTcNo"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="input-group mb-3">
+                @* <input type="radio" asp-for="Cinsiyet"  class="form-control" placeholder="Bayan"> *@
+                @* <input type="radio" asp-for="Cinsiyet"  class="form-control" placeholder="Erkek"> *@
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Cinsiyet"></span>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
+        </form>
+    </div>
+</div>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

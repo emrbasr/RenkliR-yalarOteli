@@ -1,0 +1,101 @@
+﻿@model KullaniciUpdateDTO
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Adi @Model.Soyadi</h3>
+        <div class="card-header">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Update" asp-controller="Kullanici" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id">
+            <div class="input-group mb-3">
+                <input type="email" asp-for="Email" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Email"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Adi" class="form-control" placeholder="Adiniz">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Adi"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Soyadi" class="form-control" placeholder="Soyadi">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Soyadi"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="KullaniciAdi" class="form-control" placeholder="Kullanici Adi">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+
+                        <span class="fa-sharp fa-solid fa-user text-danger" asp-validation-for="KullaniciAdi"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" asp-for="Password" class="form-control" placeholder="Şifre">
+
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Password"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="password" asp-for="RePassword" class="form-control" placeholder="Şifre Tekrar">
+
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="RePassword"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="password" asp-for="TcNo" class="form-control" placeholder="Tc No">
+
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="TcNo"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="input-group mb-3">
+                @* <input type="radio" asp-for="Cinsiyet"  class="form-control" placeholder="Bayan"> *@
+                @* <input type="radio" asp-for="Cinsiyet"  class="form-control" placeholder="Erkek"> *@
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Cinsiyet"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="date" asp-for="DogumTarihi" class="form-control" placeholder="Dogum Tarihi">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="DogumTarihi"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="file" asp-for="ImageFile" />
+            </div>
+            <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
+        </form>
+    </div>
+</div>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

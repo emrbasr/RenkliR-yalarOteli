@@ -12,6 +12,7 @@ namespace RenkliRuyalarOteli.Entities.Entites.Concrete
 
         public Guid KullaniciId { get; set; }
         public Kullanici Kullanici { get; set; }
+
         public ICollection<Rezervasyon> Rezervasyonlari { get; set; }
     }
 }

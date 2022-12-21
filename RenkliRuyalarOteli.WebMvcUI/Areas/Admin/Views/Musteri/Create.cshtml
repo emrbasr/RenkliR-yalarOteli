@@ -1,0 +1,64 @@
+﻿
+@model MusteriCreateDto
+<div class="card">
+    <div class="card-header">
+        <h3>Yeni Kullanici</h3>
+        <div class="card-header">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        </div>
+    </div>
+    <div class="card-body">
+        <form asp-action="Create" asp-controller="Musteri" method="post" enctype="multipart/form-data">
+
+            @*<div class="input-group mb-3">
+                <input type="email" asp-for="en" class="form-control" placeholder="Email">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Email"></span>
+                    </div>
+                </div>
+            </div>*@
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Ad" class="form-control" placeholder="Adiniz">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Ad"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" asp-for="Soyadi" class="form-control" placeholder="Soyadi">
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="Soyadi"></span>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            <div class="input-group mb-3">
+                <input type="text" asp-for="CepNo" class="form-control" placeholder="Cep No">
+
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="CepNo"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" asp-for="MusteriTcNo" class="form-control" placeholder="Tc No">
+
+    <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope text-danger" asp-validation-for="MusteriTcNo"></span>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" value="Kaydet">Kaydet</button>
+            
+        </form>
+    </div>
+</div>
